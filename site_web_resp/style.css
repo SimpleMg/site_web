@@ -1,0 +1,582 @@
+/* les imports */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+/* police d'ecriture */
+@font-face {
+    font-family: 'GOW';
+    src: url('font/gow.ttf');
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* le contenue de la page */
+body {
+    background: #000;
+}
+
+.container {
+    width: 1920px;
+    height: 1080px;
+    margin: 100px auto;
+    background: #000;
+    position: relative;
+}
+
+/* le haut de la page qui contien la nav bar*/
+.container header {
+    position: absolute;
+    z-index: 999;
+}
+
+/* la barre de navigation */
+.container nav  {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+
+.container .nav  ul {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container .nav li {
+    display: flex;
+    justify-content: center;
+}
+
+.container .nav #logo {
+    float: left;
+    width: 250px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+.container .nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 25px;
+    text-decoration: none;
+}
+
+.container .nav li a:hover {
+    border-radius: 10%;
+    background-color: #660000;
+    color: orange;
+}
+
+.container section {
+    height: 100vh;
+    position: relative;
+}
+
+/* le bouton pour descendre dans les pages */
+.container .scroll-down-btn {
+    height: 90px;
+    width: 45px;
+    border: 2px solid white;
+    position: absolute;
+    left: 50%;
+    bottom: 120px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.container .scroll-down-btn::before, .scroll-down-btn::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 52%;
+    border: 2px solid white;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: scrolldown 1.2s ease-in-out infinite;
+}
+
+.container .scroll-down-btn::after{
+    top: 30%;
+    animation-delay: 0.5s;
+}
+
+@keyframes scrolldown {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: 90%;
+    }
+}
+
+.container .scroll-down-btn-desc {
+    height: 90px;
+    width: 45px;
+    border: 2px solid white;
+    position: absolute;
+    left: 48%;
+    bottom: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.container .scroll-down-btn-desc::before, .scroll-down-btn-desc::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    border: 2px solid white;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: scrolldown 1.2s ease-in-out infinite;
+}
+
+.container .scroll-down-btn-desc::after{
+    top: 30%;
+    animation-delay: 0.5s;
+}
+
+/* le bouton pour monter tout en haut */
+.container .scroll-up-btn {
+    height: 90px;
+    width: 45px;
+    border: 2px solid white;
+    position: absolute;
+    left: 50%;
+    bottom: 250px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.container .scroll-up-btn::before, .scroll-up-btn::after {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 52%;
+    border: 2px solid white;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border-bottom: transparent;
+    border-right: transparent;
+    animation: scrollup 1.2s ease-in-out infinite;
+}
+
+@keyframes scrollup {
+    100% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    0% {
+        opacity: 0;
+        top: 90%;
+    }
+}
+
+.container .scroll-up-btn::after{
+    top: 30%;
+    animation-delay: 0.5s;
+}
+
+/* la video d'acceuil : */
+.container .video-wrapper video {
+    width: 100%;
+    height: auto;
+}
+/* le logo */
+.container .img_logo img {
+    position: absolute;
+    z-index: 999;
+}
+
+/* concept du jeux : */
+
+.container .concept_jeux .background-img img {
+    position: absolute;
+    display: flex;
+    z-index: -1;
+    opacity: 55%;
+    width: 100%;
+    height: 118.5vh;
+}
+
+.container .concept_jeux .title h2 {
+    font-family: 'GOW';
+    font-weight: 900;
+    text-align: center;
+    font-size: 100px;
+    color: #ffffff;
+    position: absolute;
+    left: 445px;
+    top: 75px;
+}
+
+.container .concept_jeux .title span {
+    font-family: 'GOW';
+    font-weight: 900;
+    font-size: 100px;
+    color: #660000;
+}
+
+.container .concept_jeux .title .span1 {
+    font-family: 'GOW';
+    font-weight: 900;
+    font-size: 100px;
+    color: #660000;
+}
+
+.container .concept_jeux .texte p {
+    font-weight: 800;
+    font-size: 25px;
+    font-family: 'GOW';
+    letter-spacing: 5px;
+    position: absolute;
+    color: white;
+    right: 450px;
+    bottom: 320px;
+}
+
+
+.container .concept_jeux .texte span {
+    font-weight: 800;
+    font-size: 25px;
+    font-family: 'GOW';
+    letter-spacing: 5px;
+    color: #660000;
+}
+
+/* description du jeux :  */
+.container .description_jeux {
+    top: 174px;
+}
+
+.container .description_jeux .background-img img {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    opacity: 40%;
+}
+
+.container .description_jeux .title span {
+    font-family: 'GOW';
+    font-weight: 900;
+    font-size: 100px;
+    color: #660000;
+}
+.container .description_jeux .texte span
+{
+    font-family: 'GOW';
+    font-weight: 900;
+    font-size: 20px;
+    color: #660000;
+}
+.container .description_jeux .title h2 {
+    font-family: 'GOW';
+    font-weight: 900;
+    font-size: 100px;
+    color: #ffffff;
+    position: absolute;
+    left: 445px;
+    top: 200px;
+}
+
+.container .description_jeux .texte #text_left
+{
+    position: absolute;
+    font-family: 'GOW';
+    color: white;
+    top: 400px;
+    right: 1000px;
+    letter-spacing: 2px;
+    font-size: 20px;
+    
+}
+.container .description_jeux .texte #text_right
+{
+    position: absolute;
+    color: white;
+    font-family: 'GOW';
+    font-size: 20px;
+    top: 400px;
+    left: 1000px;
+    letter-spacing: 2px;
+}
+/* formulaire de contact : */
+.container .Contact
+{
+    top: 290px;
+}
+.container .Contact form {
+    position: absolute;
+    float: center;
+    left: 800px;
+    top: 150px;
+}
+.container .Contact .name_form p
+{
+    position: relative;
+    font-family: 'GOW';
+    color: white;
+    top: 25px;
+}
+.container .Contact .name_form input
+{
+    position: relative;
+    top: 25px;
+}
+.container .Contact .name_form #name
+{
+    width: 300px;
+}
+.container .Contact .email_form p 
+{
+    position: relative;
+    font-family: 'GOW';
+    color: white;
+    top: 35px;
+}
+.container .Contact .email_form #email
+{
+    width: 300px;
+}
+.container .Contact .email_form input 
+{
+    position: relative;
+    top: 35px;
+}
+
+.container .Contact .button_submit_form button{
+    position: relative;
+    font-family: 'GOW';
+    top: 70px;
+}
+.container .Contact .button_reset_form button{
+    position: relative;
+    font-family: 'GOW';
+    top: 70px;
+}
+.container .Contact .message_form p
+{
+    position: relative;
+    color: white;
+    font-family: 'GOW';
+    top: 50px;
+}
+.container .Contact .message_form textarea
+{
+    position: relative;
+    top: 50px;
+}
+.container .Contact #titre
+{
+    position: relative;
+    color:white;
+    font-family: 'GOW';
+    font-size: 50px;
+    bottom: 75px;
+    right: 80px;
+}
+
+.container .Contact .img_contact img
+{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    opacity: 40%;
+}
+
+
+/* FOOTER TAILLE ET COULEUR  */
+
+.container .Contact footer {
+    top: 820px;
+    position: relative;
+    width: 100%;
+    background: #3A0000;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} 
+
+/* POSITION ICONE ET MENU FOOTER  */
+
+.container .Contact footer .icon-social, .Contact footer .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;    
+    flex-wrap: wrap;
+}
+
+/* STYLE SANS LISTE FOOTER POUR ICONE ET MENU */
+
+.container .Contact footer .icon-social li, .Contact footer .menu li{
+    list-style: none;
+}
+
+/* TAILLE ICONE FOOTER  */
+
+.container .Contact footer .icon-social li a {
+    font-size: 2em;
+    color: #ffffff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+/* ICONE HOVER  */
+
+.container .Contact footer .icon-social li a:hover {
+    transform: translateY(-10px);
+    color: orange;
+}
+
+/* TAILLE MENU FOOTER  */
+
+.container .Contact footer .menu li a {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+/* ANIMATION ICONES FOOTER  */
+
+.container .Contact footer .menu li a:hover {
+    transform: translateY(-10px);
+    color: orange;
+}
+
+/* COPYRIGHT FOOTER  */
+
+.container .Contact footer p {
+    color: #ffffff;
+    opacity: 45%;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+/* VAGUES FOOTER :  */
+
+.container footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(img/wave.png);
+    background-size: 1000px 100px;
+}
+
+.container footer .wave#wave1 {
+    z-index: 1000;
+    opacity: 0.7;
+    bottom: 0;
+    animation: animatewave 4s linear infinite;
+}
+
+@keyframes animatewave {
+    0% {
+        background-position: 1000px;
+    }
+    100% {
+        background-position: 0px;
+    }
+}
+
+.container footer .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animatewave_02 4s linear infinite;
+}
+
+@keyframes animatewave_02 {
+    0% {
+        background-position: 0px;
+    }
+    100% {
+        background-position: 1000px;
+    }
+}
+
+
+.container footer .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: -20px;
+    animation: animatewave_03 4s linear infinite;
+}
+
+@keyframes animatewave_03 {
+    0% {
+        background-position: 1000px;
+    }
+    100% {
+        background-position: 0px;
+    }
+}
+
+.container footer .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 10px;
+    animation: animatewave_04 4s linear infinite;
+}
+
+@keyframes animatewave_04 {
+    0% {
+        background-position: 1000px;
+    }
+    100% {
+        background-position: 0px;
+    }
+}
+
